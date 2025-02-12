@@ -261,10 +261,10 @@ function_AliDDNS_SetConfig(){
             echo -e "\n${Msg_Info}请输入获取本机IP使用的命令"
 	        read -p "(查看帮助请输入“h”):" AliDDNS_LocalIP
             [ "${AliDDNS_LocalIP}" = "h" ] && function_document_AliDDNS_LocalIP && echo -e "${Msg_Info}请输入获取本机IP使用的命令" && read -p "(查看帮助请输入“h”):" AliDDNS_LocalIP
-            [ -z "${AliDDNS_LocalIP}" ] && echo -e "${Msg_Info}检测到输入空值，设置执行命令为：“curl -s ip.sb -4”" && AliDDNS_LocalIP="curl -s ip.sb -4"
+            [ -z "${AliDDNS_LocalIP}" ] && echo -e "${Msg_Info}检测到输入空值，设置执行命令为：“curl -s test.ipw.cn -4”" && AliDDNS_LocalIP="curl -s test.ipw.cn -4"
         fi
     else
-        AliDDNS_LocalIP="curl -s ip.sb -4"
+        AliDDNS_LocalIP="curl -s test.ipw.cn -4"
     fi
     # AliDDNS_DomainServerIP
     if [ "${Switch_AliDDNS_ExpertMode}" = "1" ]; then
