@@ -264,7 +264,7 @@ function_AliDDNS_SetConfig(){
             [ -z "${AliDDNS_LocalIP}" ] && echo -e "${Msg_Info}检测到输入空值，设置执行命令为：“curl -s ip.sb -4”" && AliDDNS_LocalIP="curl -s ip.sb -4"
         fi
     else
-        AliDDNS_LocalIP="curl -s test.ipw.cn -4"
+        AliDDNS_LocalIP="curl -s ip.sb -4"
     fi
     # AliDDNS_DomainServerIP
     if [ "${Switch_AliDDNS_ExpertMode}" = "1" ]; then
